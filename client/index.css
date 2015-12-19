@@ -1,0 +1,141 @@
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #d5d5d5; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #d5d5d5;
+  opacity: 1; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #d5d5d5;
+  opacity: 1; }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #d5d5d5; }
+
+.clear {
+  clear: both; }
+
+.calendar {
+  width: 1000px;
+  margin: 0 auto;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+  .calendar .header {
+    display: flex;
+    align-items: flex-end;
+    background-color: #f4f4f4;
+    height: 100px;
+    -moz-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2); }
+    .calendar .header .buttons {
+      padding: 18px 44px; }
+      .calendar .header .buttons__button {
+        background-color: #006fca;
+        color: white;
+        min-width: 80px;
+        font-size: 13px;
+        text-align: center;
+        margin-left: 5px;
+        display: inline-block;
+        cursor: default;
+        height: 26px;
+        border-radius: 2px;
+        line-height: 26px;
+        text-shadow: 1px 1px 2px #969696; }
+      .calendar .header .buttons__button:hover {
+        background-color: #008fee; }
+      .calendar .header .buttons__button:active {
+        background-color: #0084e2; }
+    .calendar .header .searchBox {
+      display: flex;
+      align-items: flex-end;
+      padding: 18px 44px;
+      margin-left: auto; }
+      .calendar .header .searchBox__icon {
+        background-image: url(templates/images/search.png);
+        background-size: cover;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        margin-bottom: 4px; }
+      .calendar .header .searchBox__field {
+        display: inline-block;
+        margin-left: 6px;
+        width: 185px;
+        height: 14px;
+        padding: 5px 7px;
+        font-size: 12px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.375);
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.375);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.375); }
+  .calendar .table {
+    width: 92%;
+    margin: 0 auto;
+    padding: 0 50px; }
+    .calendar .table__button {
+      -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.375);
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.375);
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.375);
+      border-radius: 4px;
+      color: #707070;
+      cursor: default; }
+    .calendar .table__button:hover {
+      -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.275);
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.275);
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.275); }
+    .calendar .table .date {
+      margin-top: 14px;
+      display: flex;
+      align-items: center; }
+      .calendar .table .date__navigator {
+        display: flex;
+        align-items: center; }
+        .calendar .table .date__navigator__left, .calendar .table .date__navigator__right {
+          font-size: 14px;
+          display: inline-block;
+          padding: 0 4px;
+          height: 16px;
+          line-height: 16px; }
+        .calendar .table .date__navigator__date {
+          font-size: 16px;
+          display: inline-block;
+          margin: 0 6px; }
+      .calendar .table .date__today {
+        padding: 3px 8px;
+        font-size: 11px;
+        margin-left: 10px; }
+    .calendar .table .content {
+      margin-top: 14px; }
+      .calendar .table .content .cell {
+        float: left;
+        border: 1px solid #e2e2e2;
+        margin-left: -1px;
+        margin-bottom: -1px;
+        color: #ABABAB;
+        font-size: 11px;
+        width: 116px;
+        height: 106px;
+        padding: 6px; }
+        .calendar .table .content .cell__description {
+          margin-top: 6px;
+          line-height: 16px; }
+        .calendar .table .content .cell_current {
+          background-color: #f4f4f4;
+          color: #727172;
+          font-weight: bold; }
+        .calendar .table .content .cell_scheduled {
+          background-color: #c1e4ff; }
+          .calendar .table .content .cell_scheduled .cell__description {
+            color: #727172;
+            font-weight: bold; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,25 @@
+<script type="text/x-template" id="calendar_tpl">
+    <div class="header">
+        <div class="buttons">
+            <div class="buttons__button"><%= data.ADD %></div>
+            <div class="buttons__button"><%= data.RELOAD %></div>
+        </div>
+        <div class="searchBox">
+            <div class="searchBox__icon"></div>
+            <input class="searchBox__field" placeholder="<%= data.EVENT_DATE_MEMBER %>" />
+        </div>
+    </div>
+
+    <div class="table">
+        <div class="date">
+            <div class="date__navigator">
+                <div class="date__navigator__left table__button">◂</div>
+                <div class="date__navigator__date"><%= data.Date %></div>
+                <div class="date__navigator__left table__button">▸</div>
+            </div>
+            <div class="date__today table__button"><%= data.TODAY %></div>
+        </div>
+        <div class="content"></div>
+        <div class="clear"></div>
+    </div>
+</script>

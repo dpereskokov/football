@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Test</title><script src="libraries/jquery-1.11.3.min.js"></script><script src="libraries/underscore-min.js"></script><script src="libraries/backbone-min.js"></script><script src="index.js"></script><link href="index.css" rel="stylesheet" type="text/css"></head><body></body></html><script type="text/x-template" id="calendar_tpl"><div class="header">
+        <div class="buttons">
+            <div class="buttons__button"><%= data.ADD %></div>
+            <div class="buttons__button"><%= data.RELOAD %></div>
+        </div>
+        <div class="searchBox">
+            <div class="searchBox__icon"></div>
+            <input class="searchBox__field" placeholder="<%= data.EVENT_DATE_MEMBER %>" />
+        </div>
+    </div>
+
+    <div class="table">
+        <div class="date">
+            <div class="date__navigator">
+                <div class="date__navigator__left table__button">◂</div>
+                <div class="date__navigator__date"><%= data.Date %></div>
+                <div class="date__navigator__left table__button">▸</div>
+            </div>
+            <div class="date__today table__button"><%= data.TODAY %></div>
+        </div>
+        <div class="content"></div>
+        <div class="clear"></div>
+    </div></script><script type="text/x-template" id="calendarCell_tpl"><div class="cell__title"><%= data.Title %></div>
+    <div class="cell__description"><%= data.Description %></div></script>

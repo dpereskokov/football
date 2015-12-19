@@ -1,0 +1,193 @@
+$greyColor: #707070;
+$headerElPadding: 18px 44px;
+$tableElPadding: 0 50px;
+$tableButtonsBoxShadow: inset 0 0 5px rgba(0, 0, 0, 0.375);
+$tableButtonsBoxShadowHover: inset 0 0 5px rgba(0, 0, 0, 0.275);
+$tableButtonsRadius: 4px;
+$tableBorderColor: #e2e2e2;
+$tableActiveCellTextColor: #727172;
+
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+@mixin placeHolderColor($color...) {
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    $color;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    $color;
+    opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    $color;
+    opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    $color;
+  }
+}
+@include placeHolderColor(#d5d5d5);
+
+
+.clear {
+  clear: both;
+}
+
+.calendar {
+  width: 1000px;
+  margin: 0 auto;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+  .header {
+    display: flex;
+    align-items: flex-end;
+
+    background-color: #f4f4f4;
+    height: 100px;
+    @include box-shadow(0px 2px 1px 0px rgba(0,0,0,0.2));
+
+    .buttons {
+      padding: $headerElPadding;
+
+      &__button {
+        background-color: #006fca;
+        color: white;
+        min-width: 80px;
+        font-size: 13px;
+        text-align: center;
+        margin-left: 5px;
+        display: inline-block;
+        cursor: default;
+        height: 26px;
+        border-radius: 2px;
+        line-height: 26px;
+        text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+      }
+
+      &__button:hover {
+        background-color: #008fee;
+      }
+
+      &__button:active {
+        background-color: #0084e2;
+      }
+    }
+
+    .searchBox {
+      display: flex;
+      align-items: flex-end;
+      padding: $headerElPadding;
+      margin-left: auto;
+
+      &__icon {
+        background-image: url(templates/images/search.png);
+        background-size: cover;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        margin-bottom: 4px;
+      }
+
+      &__field {
+        display: inline-block;
+        margin-left: 6px;
+        width: 185px;
+        height: 14px;
+        padding: 5px 7px;
+        font-size: 12px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+
+        @include box-shadow(inset 0 1px 1px rgba(0,0,0,0.375));
+      }
+    }
+  }
+
+
+  .table {
+    width: 92%;
+    margin: 0 auto;
+    padding: $tableElPadding;
+
+    &__button {
+      @include box-shadow($tableButtonsBoxShadow);
+      border-radius: $tableButtonsRadius;
+      color: $greyColor;
+      cursor: default;
+    }
+
+    &__button:hover {
+      @include box-shadow($tableButtonsBoxShadowHover);
+    }
+
+    .date {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+
+      &__navigator {
+        display: flex;
+        align-items: center;
+
+        &__left, &__right  {
+          font-size: 14px;
+          display: inline-block;
+          padding: 0 4px;
+          height: 16px;
+          line-height: 16px;
+        }
+        &__date {
+          font-size: 16px;
+          display: inline-block;
+          margin: 0 6px;
+        }
+      }
+      &__today {
+        padding: 3px 8px;
+        font-size: 11px;
+        margin-left: 10px;
+      }
+    }
+
+    .content {
+      margin-top: 14px;
+
+      .cell {
+        float: left;
+        border: 1px solid $tableBorderColor;
+        margin-left: -1px;
+        margin-bottom: -1px;
+        color: #ABABAB;
+        font-size: 11px;
+        width: 116px;
+        height: 106px;
+        padding: 6px;
+
+        &__description {
+          margin-top: 6px;
+          line-height: 16px;
+        }
+
+        &_current {
+          background-color: #f4f4f4;
+          color: $tableActiveCellTextColor;
+          font-weight: bold;
+        }
+
+        &_scheduled {
+          background-color: #c1e4ff;
+
+          & .cell__description {
+            color: $tableActiveCellTextColor;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
